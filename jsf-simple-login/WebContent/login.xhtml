@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Login</title>
+    </h:head>
+    <h:form>
+        <table border="0">
+            <tr>
+                <td>Username</td>
+                <td><h:inputText value="#{loginAuth.username}"/></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><h:inputSecret value="#{loginAuth.password}"/></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="right"><h:commandButton action="#{loginAuth.checkAuth}" value="Login" type="submit"/></td>
+            </tr>
+            <tr>
+                <td colspan="2"><h:outputLabel  style="color: red; font-size: x-small" value="#{loginAuth.status}"/></td>
+            </tr>
+        </table>
+    </h:form>
+</html>
